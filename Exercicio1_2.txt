@@ -1,0 +1,31 @@
+CREATE TABLE Desenvolvedores (
+  nome VARCHAR(400),
+  cpf VARCHAR(14),
+  data_nascimento DATE
+);
+
+CREATE TABLE Projetos (
+  nome VARCHAR(400),
+  data_lancamento DATETIME,
+  genero VARCHAR(400),
+  faixa_etaria VARCHAR(5)
+);
+ 
+
+INSERT INTO Desenvolvedores (nome, cpf, data_nascimento)
+	VALUES('Benjamin Peixoto', '658.732.194-19', '1996-04-04'),
+		  ('Maysa Peixoto', '632.054.917-34', '2001-12-09'),
+          ('Augusto Pereira', '536.127.804-17', '2013-10-14'),
+          ('Maria Clara da Cunha', '967.324.058-29', '2022-12-15'),
+          ('Vitor Jesus', '307.864.159-75', '2021-01-25');
+
+INSERT INTO Projetos (nome, data_lancamento, genero, faixa_etaria)
+	VALUES('O Jogo', '2010-12-04T21:00:56', 'Ação', 'LIVRE'),
+          ('Interspace', '2003-05-17T14:09:30', 'Ação, Aventura', '18+'),
+          ('Vegas', '2012-02-04T06:07:36', 'Azar', 'LIVRE'),
+          ('Super Mario 0', '1990-11-01T05:27:44', 'Ação, Terror, Suspense', '18+'),
+          ('Fazendinha', '1996-02-19T02:30:23', 'Romance', '16+');
+
+	SELECT data_lancamento,
+    	   genero
+	  FROM Projetos

@@ -1,0 +1,30 @@
+CREATE TABLE Marcas (
+  nome VARCHAR(400),
+  sac VARCHAR(15),
+  nacionalidade VARCHAR(20)
+);
+
+CREATE TABLE Produtos (
+  nome VARCHAR(400),
+  preco DECIMAL(5, 2),
+  qtde_estoque INTEGER
+);
+ 
+
+INSERT INTO Marcas (nome, sac, nacionalidade)
+	VALUES('da Conceição', '61 7775-5074', 'Brasileiro'),
+          ('Ribeiro da Luz - EI', '+55 (081) 9713 3615', 'Brasileiro'),
+          ('Costa', '0800-626-9810', 'Brasileiro'),
+          ('Costela', '51 0099 7018', 'Brasileiro'),
+          ('Viana', '+55 (041) 7008 1448', 'Inglês');
+
+INSERT INTO Produtos (nome, preco, qtde_estoque)
+	VALUES('Maçã', 6142.15, 278),
+          ('Banan', 1409.97, 6875),
+          ('Laranja', 5326.68, 3478),
+          ('Ovo', 3515.74, 6058),
+          ('Chá', 3068.17, 1526);
+          
+	SELECT sac,
+    	   nome
+	  FROM Marcas

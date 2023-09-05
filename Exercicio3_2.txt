@@ -1,0 +1,20 @@
+CREATE TABLE Colaboradores (
+    id VARCHAR(10),
+    nome VARCHAR(400),
+    cpf VARCHAR(11),
+    cargo VARCHAR(400),
+    salario DECIMAL(5, 2)
+);
+
+INSERT INTO Colaboradores (id, nome, cpf, cargo, salario)
+	VALUES ('8498488', 'Joana Maria', '12345678901', 'Gerente geral', 15000.10),
+           ('8498456', 'Paulo Joao',  '48949456461', 'Analista pleno', 5906.15),
+           ('4984984', 'Felipe Gabriel', '58949816513', 'Estagiario', 724.56),
+           ('4894896', 'Fernanda Gabriela', '28998651345', 'Analista pleno', 5906.15),
+           ('1844949', 'Olindo Vinicius', '94618949366', 'UX Designer', 3245.11);
+
+  SELECT id, 
+         cpf, 
+         cargo, 
+         nome
+    FROM Colaboradores;

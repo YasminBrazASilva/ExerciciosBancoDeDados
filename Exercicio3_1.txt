@@ -1,0 +1,19 @@
+CREATE TABLE Alunos (
+    ra VARCHAR(10),
+    nome VARCHAR(400),
+    data_nascimento DATE,
+    endereco VARCHAR(400),
+    email VARCHAR(400)
+);
+
+INSERT INTO Alunos (ra, nome, data_nascimento, endereco, email)
+  VALUES ('12654', 'Maria Joana', '1999-08-05', 'Rua da Esquina 23', 'mariaJoana@gmail.com'),
+         ('21984', 'Joao Paulo', '2000-09-12', 'Rua Bem Boa 569', 'joaoPaulo@gmail.com'),
+         ('48949', 'Gabriel Felipe', '1998-06-06', 'Avenida Portão 123', 'gabrielFelipe@gmail.com'),
+         ('48947', 'Gabriela Fernanda', '1998-06-06', 'Avenida Portão 123', 'gabrielaFernanda@gmail.com'),
+         ('98474', 'Vinicius Olindo', '2001-12-15', 'Rua Dividida 9', 'viniciusOlindo@gmail.com');
+
+  SELECT ra, 
+  		 data_nascimento, 
+         nome
+    FROM Alunos;

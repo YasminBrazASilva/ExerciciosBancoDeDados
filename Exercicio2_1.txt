@@ -1,0 +1,33 @@
+CREATE TABLE Autores (
+  nome VARCHAR(400),
+  email VARCHAR(400),
+  nacionalidade VARCHAR(20),
+  data_nascimento DATE
+);
+
+CREATE TABLE Livros (
+  titulo VARCHAR(400),
+  qtde_paginas INTEGER,
+  acabamento VARCHAR(400),
+  editora VARCHAR(400)
+);
+ 
+
+INSERT INTO Autores (nome, email, nacionalidade, data_nascimento)
+	VALUES('João Guilherme Pereira', 'maria-luizafreitas@example.net', 'Brasileiro',  '1981-04-07'),
+          ('Sr. Lucas Pereira', 'agathada-rosa@example.com', 'Português', '1985-02-28'),
+          ('Antônio Carvalho', 'lopespedro-henrique@example.net', 'Mexicano', '2000-09-13'),
+          ('Dr. Noah da Rocha', 'matheuspires@example.com', 'Brasileiro', '2006-05-21'),
+          ('Isabella Santos', 'fernandesstephany@example.com', 'Inglesa', '1991-03-25');
+
+INSERT INTO Livros (titulo, qtde_paginas, acabamento, editora)
+	VALUES('O Segredo da Floresta Encantada', 1024, 'Capa dura', 'da Rosa - EI'),
+          ('A Jornada do Herói Perdido', 517, 'Capa dura', 'Rodrigues'),
+          ('As Crônicas do Tempo Futuro', 2012, 'Capa dura', 'Novaes - EI'),
+          ('O Mistério do Relógio Quebrado', 11, 'Capa dura', 'da Rocha Silva - ME'),
+          ('A Busca Pelo Tesouro Perdido', 302, 'Brochura', 'Correia Ferreira S/A');
+
+	SELECT nome,
+    	   nacionalidade,
+           data_nascimento
+	  FROM Autores

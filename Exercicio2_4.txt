@@ -1,0 +1,44 @@
+CREATE TABLE Diretores (
+  nome VARCHAR(400),
+  qtde_filmes INTEGER,
+  data_nascimento DATE
+);
+
+CREATE TABLE Filmes (
+  titulo VARCHAR(400),
+  duracao TIME,
+  idioma_original VARCHAR(20),
+  preco DECIMAL (3, 2)
+);
+
+CREATE TABLE Atores (
+  nome VARCHAR(400),
+  nacionalidade VARCHAR(20),
+  data_nascimento DATE
+);
+  
+
+INSERT INTO Diretores (nome, qtde_filmes, data_nascimento)
+	VALUES('Thomas Castro', 120, '2021-02-22'),
+          ('João Vitor Rocha', 71, '2021-04-23'),
+          ('Francisco da Costa', 78, '1990-06-29'),
+          ('Davi Luiz da Luz', 85, '1971-11-02'),
+          ('Daniel da Costa', 17, '1989-10-08');
+
+INSERT INTO Filmes (titulo, duracao, idioma_original, preco)
+	VALUES('A Aventura Cósmica', '02:05:01', 'Inglês', 128.01),
+          ('O Enigma do Tempo Perdido', '03:39:57', 'Inglês', 79.44),
+          ('A Ilha dos Sonhos', '01:23:18', 'Inglês', 149.54),
+          ('Noite de Mistério na Mansão Assombrada', '01:14:50', 'Português', 129.78),
+          ('O Segredo do Abismo Profundo', '00:08:07', 'Inglês', 51.35);
+
+INSERT INTO Atores (nome, nacionalidade, data_nascimento)
+	VALUES('Gabriel Santos', 'Brasileiro', '2005-12-11'),
+          ('João Gabriel Barros', 'Argentino', '1986-03-25'),
+          ('Pedro Caldeira', 'Argentino', '1992-12-14'),
+          ('Sabrina Campos', 'Estadunidense', '2010-09-07'),
+          ('Maitê Teixeira', 'Inglês', '1972-07-27');
+          
+	SELECT nacionalidade,
+    	   nome
+	  FROM Atores

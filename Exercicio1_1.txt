@@ -1,0 +1,32 @@
+CREATE TABLE Clientes (
+  nome VARCHAR(400),
+  cpf VARCHAR(14),
+  email VARCHAR(400),
+  telefone VARCHAR(15)      
+);
+
+CREATE TABLE Pets (
+  nome VARCHAR(400),
+  especie VARCHAR(400),
+  data_nascimento DATE
+);
+ 
+
+INSERT INTO Clientes (nome, cpf, email, telefone)
+	VALUES('Luiz Henrique Cardoso', '239.187.054-04', 'isadora56@example.net', '+55 11 2834 8223'),
+          ('Bryan Oliveira', '647.012.938-22', 'zdas-neves@example.org', '+55 31 0682 5129'),
+          ('Srta. Fernanda Almeida', '413.706.892-50', 'viniciusbarros@example.org', '+55 41 5784 7880'),
+          ('Dr. Daniel Lima', '518.342.609-06', 'vmelo@example.org', '0300-145-7188'),
+          ('Alana Gonçalves', '821.750.946-85', 'araujoleticia@example.com', '84 0593-8246');
+
+INSERT INTO Pets (nome, especie, data_nascimento)
+	VALUES('Costela', 'Coelho', '1983-02-06'),
+		  ('Paçoca', 'Cachorro', '1984-06-20'),
+		  ('Amora', 'Cachorro', '2018-02-28'),
+		  ('Sucrilhos', 'Gato', '1984-06-02'),
+		  ('Danone', 'Peixe', '1974-04-29');
+
+	SELECT nome, 
+	       cpf
+      FROM Clientes  
+	

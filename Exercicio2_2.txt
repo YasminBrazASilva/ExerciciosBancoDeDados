@@ -1,0 +1,29 @@
+CREATE TABLE Montadoras (
+  nome VARCHAR(400),
+  site VARCHAR(400),
+  logotipo VARCHAR(400)
+);
+
+CREATE TABLE Carros (
+  placa VARCHAR(8),
+  modelo VARCHAR(400),
+  ano INTEGER
+);
+ 
+
+INSERT INTO Montadoras (nome, site, logotipo)
+	VALUES('Fernandes', 'https://campos.com/register.html', 'https://campos.com/register/logo.html'),
+          ('da Rosa Moreira - ME', 'https://melo.net/tag/blog/explore/login/', 'https://melo.net/tag/blog/explore/logo'),
+          ('Freitas S.A.', 'http://www.costela.com/explore/homepage/', 'http://www.costela.com/explore/homepage/logo'),
+          ('Castro', 'http://www.vieira.com/explore/search/wp-content/author.php', 'http://www.vieira.com/explore/search/wp-content/logo'),
+          ('Moreira Ferreira e Filhos', 'http://da.br/search/', 'http://da.br/search/logo');
+
+INSERT INTO Carros (placa, modelo, ano)
+	VALUES('LWN-2R54', 'Fiat Uno', '2007'),
+          ('TXY-1E60', 'Fiat Toro', '1993'),
+          ('ZRO-8D65', 'Ford Fiesta', '2022'),
+          ('RPU-0Z58', 'Forda Ka', '1989'),
+          ('AVO-3E39', 'Ford Ka', '2002');
+          
+	SELECT *
+	  FROM Carros
